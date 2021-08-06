@@ -3,17 +3,11 @@
 namespace LunarMoon72\onJoin;
 
 use pocketmine\plugin\PluginBase;
-
 use pocketmine\event\player\PlayerJoinEvent;
-
 use pocketmine\event\player\PlayerQuitEvent;
-
 use pocketmine\Player;
-
 use pocketmine\Server;
-
 use pocketmine\event\Listener;
-
 use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener{
