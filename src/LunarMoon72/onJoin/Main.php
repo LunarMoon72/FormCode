@@ -20,18 +20,15 @@ class Main extends PluginBase implements Listener{
 	public function onEnabled(){
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getLogger()->info("Plugin has been enabled");
-
 	}
-
 	public function onDisabled(){
 		$this->getLogger()->info("Plugin is Disabled");
 
 	}
-
 	public function onJoin(PlayerJoinEvent $event){
 		$player = $event->getPlayer();
 		$name = $player->getName();
-		$this->getServer()->broadcastMessage(TextFormat::GREEN."[+] Welcome back $name")
+		$this->getServer()->broadcastMessage(C::GREEN."Hey $name Welcome Back!");
 	}
 
 }
