@@ -28,7 +28,7 @@ class Main extends PluginBase implements Listener{
 	public function onJoin(PlayerJoinEvent $event){
 		$player = $event->getPlayer();
 		$name = $player->getName();
-		$this->getServer()->broadcastMessage(C::GREEN."Hey $name Welcome Back!");
+		$this->getServer()->broadcastMessage(TextFormat::GREEN."Hey $name Welcome Back!");
 	}
 
 }
