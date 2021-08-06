@@ -2,7 +2,7 @@
 
 namespace LunarMoon72\onJoin;
 
-use pocketmine\plugin\PluginBase
+use pocketmine\plugin\PluginBase;
 
 use pocketmine\event\player\PlayerJoinEvent;
 
@@ -28,9 +28,6 @@ class Main extends PluginBase implements Listener{
 
 	}
 
-	public function onLoad(){
-		$this->getLogger()->info("Plugin is loading");
-	}
 	public function onJoin(PlayerJoinEvent $event){
 		$player = $event->getPlayer();
 		$name = $player->getName();
