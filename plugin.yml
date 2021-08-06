@@ -1,0 +1,7 @@
+name: onJoin()
+version: 1.0.0
+author: LunarMoon72
+main: LunarMoon72\CommandPerm\Main
+api: 3.21.1
+mcpe-protocol: 448
+description: A plugin example of the onJoin() function.
