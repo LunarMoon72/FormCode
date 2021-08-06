@@ -1,6 +1,6 @@
 <?php
 
-namespace LunarMoon72\onJoin()
+namespace LunarMoon72\onJoin;
 
 use pocketmine\plugin\PluginBase
 
@@ -18,7 +18,7 @@ use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener{
 	public function onEnabled(){
-		$this->getServer()->getPluginManager()->registerEvents($this,$this);;
+		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getLogger()->info("Plugin has been enabled");
 
 	}
