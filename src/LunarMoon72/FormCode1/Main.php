@@ -5,11 +5,9 @@ namespace LunarMoon72\FormCode1;
 use pocketmine\plugin\PluginBase;
 
 use pocketmine\Player;
-
 use pocketmine\Server;
 
 use pocketmine\command\Command;
-
 use pocketmine\command\CommandSender;
 
 use pocketmine\event\Listener;
