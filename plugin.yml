@@ -6,7 +6,7 @@ description: This is a FormAPI test
 version: 0.0.1
 
 commands:
-  form1:
+  inv:
     permission: formcode1.cmd
     aliases: form
     description: Opens the Form
