@@ -39,6 +39,15 @@ class Main extends PluginBase implements Listener{
     		if($result === null){
     			return true;
     		}
+    		switch($result){
+    			case 0:
+                  $player->sendMessage("Search up LunarMoon72 on youtube!");
+    			break;
+
+    			case 1:
+                  $player->sendMessage("Go join the discord now!");
+    			break;
+    		}
 
     	});
     	$form->setTitle("Form Example");
