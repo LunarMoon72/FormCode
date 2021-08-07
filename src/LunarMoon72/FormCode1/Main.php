@@ -3,7 +3,7 @@
 namespace LunarMoon72\FormCode1;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\plugin\FormApi;
+use pocketmine\plugin\FormAPI;
 
 use pocketmine\Player;
 use pocketmine\Server;
