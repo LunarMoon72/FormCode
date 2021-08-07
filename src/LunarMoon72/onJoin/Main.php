@@ -3,26 +3,43 @@
 namespace LunarMoon72\onJoin;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\Player;
 use pocketmine\Server;
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
-use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener{
+	class Main extends PluginBase implements Listener{
 	public function onEnabled(){
-		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getLogger()->info("Plugin has been enabled");
+		$this->getServer->getPluginManager->registerEvents($this,$this);
+		$this->getLogger()->info("Plugin is enabled");
 	}
-	public function onDisabled(){
-		$this->getLogger()->info("Plugin is Disabled");
+	
+	public function onCommand(Command $cmd, CommandSender $sender, String $label, Array $args) : bool {
+        switch($cmd->getName()){
+            case "form1":
+              if($sender instanceof Player){
+                  $this->form($sender);
+              } else {
+                     $sender->sendMessage("You arnt a player, to open the form; join the game.");
+              }
+        }
+        return true;
+    } 
+    public function form($player){
+    	$api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
+    	$form = $api->createSimpleForm(function (Player $player, int $data = null){
+    		$result = $data;
+    		if($result === null){
+    			return true;
+    		}
 
-	}
-	public function onJoin(PlayerJoinEvent $event){
-		$player = $event->getPlayer();
-		$name = $player->getName();
-		$this->getServer()->broadcastMessage(TextFormat::GREEN."Hey $name Welcome Back!");
-	}
+    	});
+    	$form->setTitle("Form Example");
+    	$form->setContent("Press a button!");
+    	$form->addButton("Youtube");
+    	$form->addButton("Discord");
+    }
 
 }
