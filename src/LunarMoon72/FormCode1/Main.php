@@ -17,11 +17,11 @@ use pocketmine\event\Listener;
 
 class Main extends PluginBase implements Listener{
 	public function onEnabled(){
-		$this->getServer->getPluginManager->registerEvents($this,$this);
+		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getLogger()->info("Plugin is enabled");
 	}
 	
-	public function onCommand(Command $cmd, CommandSender $sender, String $label, Array $args) : bool {
+	public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args) : bool {
         switch($cmd->getName()){
             case "form1":
               if($sender instanceof Player){
