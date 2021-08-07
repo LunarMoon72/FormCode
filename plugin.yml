@@ -3,6 +3,7 @@ main: LunarMoon72\FormCode1\Main
 api: 3.21.1
 mcpe-protocal: 448
 description: This is a FormAPI test
+version: 0.0.1
 
 commands:
   form1:
