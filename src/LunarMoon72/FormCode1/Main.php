@@ -37,7 +37,7 @@ class Main extends PluginBase implements Listener{
              Item::get(Item::DIAMOND_SWORD),
              Item::get(Item::DIAMOND_PICKAXE)
           ]);
-          $menu->setName("CustomCrate")
+          $menu->setName("CustomCrate");
           $menu->getInventory()->addItem(Item::get(Item::DIAMOND_AXE));
           $menu->getInventory()->setItem(3, Item::get(Utem::GOLD_INGOT));
           $menu->send($player);
